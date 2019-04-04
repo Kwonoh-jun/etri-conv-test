@@ -44,7 +44,10 @@ int main ( int argc, char** argv )
     if( !src.data )  { return -1; }
 
     // Make filter
-    kernel = (cv::Mat_<float>(3, 3) << -1, -1, -1, -1, 8, -1, -1, -1, -1);
+    //kernel = (cv::Mat_<float>(3, 3) << -1, -1, -1, -1, 8, -1, -1, -1, -1);
+    kernel = (cv::Mat_<float>(3, 3, 3) << -1, -1, -1, -1, 8, -1, -1, -1, -1
+					   0,  0,  0,  0, 0,  0,  0,  0,  0,
+					   0,  0,  0,  0, 0,  0,  0,  0,  0);
 
 
     // Run 2D filter

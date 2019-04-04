@@ -13,7 +13,7 @@ int main ( int argc, char** argv )
     cv::Mat src, kernel, dst;
 
     // Load an image
-    src = cv::imread( argv[1] );
+    src = cv::imread( "1.jpg" );
     if( !src.data )  { return -1; }
 
     // Make filter
